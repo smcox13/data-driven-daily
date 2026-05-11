@@ -1,0 +1,79 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all font-family="Arial, Helvetica, sans-serif" />
+      <mj-text color="#1f2937" font-size="15px" line-height="1.6" />
+      <mj-section padding="0" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#f3f4f6">
+    <mj-section background-color="#0f172a" padding="24px">
+      <mj-column>
+        <mj-text color="#f8fafc" font-size="12px" text-transform="uppercase" letter-spacing="1px">
+          Data-Driven Daily
+        </mj-text>
+        <mj-text color="#ffffff" font-size="28px" font-weight="700">
+          Executive intelligence for marketing, data, and AI leaders
+        </mj-text>
+        <mj-text color="#cbd5e1">
+          Issue date: {{ newsletter.issue_date }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="28px">
+      <mj-column>
+        <mj-text color="#0f766e" font-size="12px" font-weight="700" text-transform="uppercase">
+          Featured Insight
+        </mj-text>
+        <mj-text font-size="24px" font-weight="700">
+          <a href="{{ newsletter.featured_insight.url }}" style="color:#111827;text-decoration:none;">
+            {{ newsletter.featured_insight.title }}
+          </a>
+        </mj-text>
+        <mj-text>{{ newsletter.featured_insight.summary | safe }}</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="0 28px 28px">
+      <mj-column>
+        <mj-text color="#0f766e" font-size="12px" font-weight="700" text-transform="uppercase">
+          Quick Hits
+        </mj-text>
+        {% for item in newsletter.quick_hits %}
+        <mj-text padding-bottom="16px">
+          <strong><a href="{{ item.url }}" style="color:#111827;text-decoration:none;">{{ item.title }}</a></strong><br />
+          {{ item.summary | safe }}
+        </mj-text>
+        {% endfor %}
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fef3c7" padding="24px 28px">
+      <mj-column>
+        <mj-text color="#92400e" font-size="12px" font-weight="700" text-transform="uppercase">
+          TL;DR
+        </mj-text>
+        <mj-text color="#78350f">{{ newsletter.tldr | safe }}</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="28px">
+      <mj-column>
+        <mj-text color="#0f766e" font-size="12px" font-weight="700" text-transform="uppercase">
+          {{ newsletter.cta.headline }}
+        </mj-text>
+        <mj-text>{{ newsletter.cta.body | safe }}</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#e5e7eb" padding="18px 28px">
+      <mj-column>
+        <mj-text color="#4b5563" font-size="12px">
+          {{ newsletter.footer.brand }}<br />
+          {{ newsletter.footer.disclaimer }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

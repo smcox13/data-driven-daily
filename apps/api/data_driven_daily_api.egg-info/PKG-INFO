@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: data-driven-daily-api
+Version: 0.1.0
+Summary: Backend for the Data-Driven Daily AI-assisted newsletter platform.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.116.0
+Requires-Dist: uvicorn>=0.35.0
+Requires-Dist: sqlalchemy>=2.0.40
+Requires-Dist: psycopg[binary]>=3.2.10
+Requires-Dist: pydantic>=2.11.0
+Requires-Dist: pydantic-settings>=2.10.0
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: requests>=2.32.0
+Requires-Dist: beautifulsoup4>=4.13.0
+Requires-Dist: openai>=1.109.0
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: celery>=5.4.0
+Requires-Dist: redis>=6.2.0
+Requires-Dist: feedparser>=6.0.11
+Requires-Dist: langchain>=0.3.25
+Requires-Dist: langchain-openai>=0.3.17
+Requires-Dist: httpx>=0.28.0
+Requires-Dist: PyJWT>=2.10.1
+Requires-Dist: python-multipart>=0.0.20
+Requires-Dist: pgvector>=0.3.5
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.0; extra == "dev"
+
+# Data-Driven Daily API
+
+FastAPI backend for source ingestion, ranking, draft generation, newsletter export, and archive management.
