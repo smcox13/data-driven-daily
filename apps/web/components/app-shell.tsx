@@ -1,13 +1,14 @@
 import Link from "next/link";
+import { BarChart3, BookOpenText, Bot, Newspaper, Rss, Settings2 } from "lucide-react";
 import type { ReactNode } from "react";
 
 const navItems = [
-  { href: "/", label: "Dashboard", marker: "DB" },
-  { href: "/sources", label: "Sources", marker: "RS" },
-  { href: "/articles", label: "Article Library", marker: "AR" },
-  { href: "/drafts", label: "Drafts", marker: "AI" },
-  { href: "/newsletters", label: "Archive", marker: "NL" },
-  { href: "/settings/ai", label: "AI Settings", marker: "ST" }
+  { href: "/", label: "Dashboard", icon: BarChart3 },
+  { href: "/sources", label: "Sources", icon: Rss },
+  { href: "/articles", label: "Article Library", icon: BookOpenText },
+  { href: "/drafts", label: "Drafts", icon: Bot },
+  { href: "/newsletters", label: "Archive", icon: Newspaper },
+  { href: "/settings/ai", label: "AI Settings", icon: Settings2 }
 ];
 
 export function AppShell({ children }: { children: ReactNode }) {
@@ -24,15 +25,13 @@ export function AppShell({ children }: { children: ReactNode }) {
           </div>
 
           <nav className="space-y-2">
-            {navItems.map(({ href, label, marker }) => (
+            {navItems.map(({ href, label, icon: Icon }) => (
               <Link
                 key={href}
                 href={href}
                 className="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium text-slate transition hover:bg-mist hover:text-ink"
               >
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-200 bg-white text-[10px] font-semibold tracking-[0.12em] text-brand">
-                  {marker}
-                </span>
+                <Icon className="h-4 w-4" />
                 {label}
               </Link>
             ))}

@@ -1,0 +1,17 @@
+{
+  "/api/drafts/[id]/html-override/route": "/api/drafts/[id]/html-override",
+  "/api/drafts/[id]/regenerate/route": "/api/drafts/[id]/regenerate",
+  "/_not-found/page": "/_not-found",
+  "/api/drafts/[id]/route": "/api/drafts/[id]",
+  "/api/exports/[id]/route": "/api/exports/[id]",
+  "/api/drafts/route": "/api/drafts",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/drafts/[id]/page": "/drafts/[id]",
+  "/articles/page": "/articles",
+  "/login/page": "/login",
+  "/settings/ai/page": "/settings/ai",
+  "/newsletters/page": "/newsletters",
+  "/page": "/",
+  "/drafts/page": "/drafts",
+  "/sources/page": "/sources"
+}
