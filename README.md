@@ -17,6 +17,9 @@ Data-Driven Daily is a greenfield AI-assisted executive newsletter platform buil
 
 ## Local development
 
+For restoration after removing a local checkout, see [RESUME.md](RESUME.md),
+including environment-file locations and the preserved SQLite database.
+
 ### Recommended environment
 
 1. Create the project Conda environment with `conda env create -f environment.yml`.
